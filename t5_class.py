@@ -1,4 +1,5 @@
 import random
+import os
 
 
 class Game:
@@ -6,7 +7,7 @@ class Game:
     def Word_Generation():
         print('...**Generating random word**...\n')
         print('**Random word was generated**\n...**Starting the game**...\n**Game started, good luck!**')
-        with open(r'C:\Users\Aidos\Downloads\тексты, книги\WordsStockRus.txt', 'r', encoding='UTF-8') as file:
+        with open(f'{os.getcwd()}\\Game-Guess-the-word\\WordsStockRus.txt', 'r', encoding='UTF-8') as file:
             file = list(file)
             random_word = list(random.choice(file))
         return random_word
